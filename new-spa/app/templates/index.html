@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flask Template</title>
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <style>
+            .container {
+                max-width: 500px;
+                padding-top: 30px;
+            }
+
+            input {
+                max-width: 200px;
+            }
+        </style>
+    </head>
+<body>
+    <h1>Welcome to The First Flask Template of this page.</h1>
+    <div class="container">
+        <form role="form" method="post" onsubmit="return false">
+            <div class="form-group">
+                <input type="number" class="form-control" name="number-one" placeholder="Enter a number">
+                <input type="number" class="form-control" name="number-two" placeholder="Enter a number">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        <p>The calculated value is <span id="results"></span></p>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+<script src={{url_for('static' filename="app.js") }}></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
